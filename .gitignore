@@ -1,2 +1,5 @@
 # Local implementation records; never publish with Website source.
 /phase3/
+
+# Local editor settings.
+/.idea/
