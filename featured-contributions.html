@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="color-scheme" content="light">
+    <meta name="description" content="Four scholarly contributions by Hankang Lee in digital twins, scheduling, adaptive manufacturing, and privacy-preserving learning.">
+    <title>Hankang Lee | Featured Contributions</title>
+    <link rel="stylesheet" href="assets/css/site.css?v=4">
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">Skip to content</a>
+    <header class="site-header">
+      <div class="site-header__inner">
+        <a class="site-name" href="index.html" aria-label="Hankang Lee, Home">Hankang Lee</a>
+        <nav class="site-nav" aria-label="Main navigation">
+          <a href="index.html">Home</a>
+          <a href="research-program.html">Research Program</a>
+          <a href="featured-contributions.html" aria-current="page">Featured Contributions</a>
+          <a href="profile-resources.html">Profile &amp; Resources</a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main-content" class="page-shell page-shell--article">
+      <header class="page-heading">
+        <h1>Featured Contributions</h1>
+        <p>The contributions featured here span system modeling, operational decision-making, and privacy-preserving learning. They provide foundations for the continuing development of <a href="research-program.html">my research program</a>.</p>
+      </header>
+
+      <article class="editorial-section contribution" aria-labelledby="digital-twin">
+        <h2 id="digital-twin">Digital Twin Modeling and Optimization</h2>
+        <div class="prose">
+          <p>Manufacturing performance depends on how production, transport, and buffering interact under uncertainty. Evaluating the system-wide effects of operating alternatives requires detailed models, but their computational cost makes experimentation challenging. I developed a simulation-enabled digital twin framework that connects the states and interactions of manufacturing agents with graph-based analysis of job and vehicle flows to examine process dependencies. Statistical metamodeling for sequential experimentation characterizes how performance varies across operating conditions, supporting the evaluation and optimization of operating alternatives while reducing the simulation effort needed to estimate performance.</p>
+          <p>Jobshop simulation studies identified inefficient transport patterns and revealed how the dominant bottleneck shifts between transport, machines, and queues under different operating conditions.</p>
+          <p>This work provides a foundation for my research on representations that make operational interactions and their consequences explicit and analyzable.</p>
+        </div>
+        <figure class="research-figure">
+          <div class="figure-frame">
+            <img src="assets/images/figures/digital-twin-display.png" alt="Conceptual three-layer diagram showing a physical factory, its digital representation, and a DT intelligence layer. Arrows indicate operational data flowing toward the digital layers and actions for production planning, process control, and scheduling returning to the physical system." width="1600" height="1115" loading="lazy" decoding="async">
+          </div>
+          <figcaption>Conceptual view of a manufacturing digital twin, showing how physical manufacturing entities, digital representations, and decision support are connected through data and action flows. <a href="https://doi.org/10.1115/1.4068980" target="_blank" rel="noopener">Figure source<span class="sr-only"> (opens in a new tab)</span></a>, Fig. 1. Originally published by ASME. &copy; 2025 ASME.</figcaption>
+        </figure>
+        <div class="publications">
+          <h3>Publications</h3>
+          <ul>
+            <li>Lee, H., and Yang, H. (2023). “<a href="https://doi.org/10.1115/1.4063234" target="_blank" rel="noopener">Digital Twinning and Optimization of Manufacturing Process Flows<span class="sr-only"> (opens in a new tab)</span></a>.” <cite>Journal of Manufacturing Science and Engineering</cite>, 145(11), 111008.</li>
+            <li>Lee, H., and Yang, H. (2023). “<a href="https://doi.org/10.1115/MSEC2023-105613" target="_blank" rel="noopener">Digital Twin Simulation and Optimization of Manufacturing Process Flows<span class="sr-only"> (opens in a new tab)</span></a>.” <cite>Proceedings of the ASME 2023 18th International Manufacturing Science and Engineering Conference (MSEC 2023)</cite>, Vol. 2, Article V002T07A013.</li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="editorial-section contribution" aria-labelledby="cognitive-digital-twin">
+        <h2 id="cognitive-digital-twin">Cognitive Digital Twin for Scheduling</h2>
+        <div class="prose">
+          <p>Production scheduling must reconcile the differing objectives and constraints of processing, transport, and storage as operating conditions change. I developed a cognitive digital twin framework that equips heterogeneous manufacturing agents with role-specific observations, objectives, and decision-making capabilities. Cognitive Multiagent Scheduling coordinates their task allocations through structured negotiation and a composite reward that connects task transition, workload balance, and transport efficiency with system-wide productivity. This architecture makes trade-offs between local priorities and overall performance explicit within decentralized scheduling.</p>
+          <p>Jobshop simulations showed how the weighting of role-specific objectives affects congestion and workload distribution. Comparisons with conventional scheduling rules demonstrated improvements in job flow time and, particularly under high congestion, throughput.</p>
+          <p>This work informs my research on how local decision objectives and coordination mechanisms shape system-level behavior and performance.</p>
+        </div>
+        <figure class="research-figure">
+          <div class="figure-frame">
+            <img src="assets/images/figures/cognitive-digital-twin-display.png" alt="Conceptual diagram of interconnected machine, transport, and storage agents with embedded intelligence. Labels around the network identify volatile markets, dynamic demand, machine failures, material handling disruptions, and delivery backlogs." width="1600" height="715" loading="lazy" decoding="async">
+          </div>
+          <figcaption>Conceptual view of a cognitive digital twin, showing interconnected manufacturing agents with embedded intelligence in an environment subject to changing demand and operational disruptions. Originally published by ASME. &copy; 2025 ASME.</figcaption>
+        </figure>
+        <div class="publications">
+          <h3>Publications</h3>
+          <ul>
+            <li>Lee, H., and Yang, H. (2025). “<a href="https://doi.org/10.1115/1.4068980" target="_blank" rel="noopener">Cognitive Digital Twin for Multiobjective Production Scheduling<span class="sr-only"> (opens in a new tab)</span></a>.” <cite>Journal of Manufacturing Science and Engineering</cite>, 147(9), 091004.</li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="editorial-section contribution" aria-labelledby="machine-networks">
+        <h2 id="machine-networks">Self-Organizing Machine Networks</h2>
+        <div class="prose">
+          <p>Disruptions can leave a factory’s physical layout poorly matched to changing material-flow requirements, creating transport bottlenecks and production delays. I developed the Self-Organizing Machine Network (SOMN) framework, in which machine agents learn coordinated policies for adjusting their positions and orientations through multi-agent reinforcement learning. Within a digital twin environment, agents execute these policies in a decentralized manner, accounting for flow relationships, queue accessibility, transport connectivity, and spatial constraints. This connects local spatial actions with system-level performance, enabling layout reconfiguration as an adaptive response to disruption.</p>
+          <p>Jobshop simulations with transport obstacles showed that SOMN-reconfigured layouts reduced weighted transport distances relative to the original obstructed layouts and could restore production performance to levels close to the unobstructed benchmark.</p>
+          <p>My ongoing work investigates how to account for relocation effort and evaluate the effects of reconfiguration on system adaptation and recovery over time.</p>
+          <p>This work informs my research on structural adaptation and its consequences for operational-system behavior and performance.</p>
+        </div>
+        <figure class="research-figure">
+          <div class="figure-frame">
+            <img src="assets/images/figures/self-organizing-machine-networks-display.png" alt="Conceptual diagram linking factory states and spatial observations to multiple machine agents and their action outputs. Learning components connect the agents within a digital twin, shown above a photograph representing the physical factory." width="1600" height="1113" loading="lazy" decoding="async">
+          </div>
+          <figcaption>Conceptual overview of the Self-Organizing Machine Network (SOMN) framework, connecting factory states and agent-specific observations with multi-agent reinforcement learning for coordinated adjustments to machine positions and orientations. Originally published by ASME. &copy; 2025 ASME.</figcaption>
+        </figure>
+        <div class="publications">
+          <h3>Publications</h3>
+          <ul>
+            <li>Lee, H., and Yang, H. (2025). “<a href="https://doi.org/10.1115/MSEC2025-155761" target="_blank" rel="noopener">Multi-agent Artificial Intelligence to Self-organize Machine Networks for Resilient Manufacturing<span class="sr-only"> (opens in a new tab)</span></a>.” <cite>Proceedings of the ASME 2025 20th International Manufacturing Science and Engineering Conference (MSEC 2025)</cite>, Vol. 2, Article V002T20A006.</li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="editorial-section contribution" aria-labelledby="privacy-neural-networks">
+        <h2 id="privacy-neural-networks">Privacy-Preserving Neural Networks</h2>
+        <div class="prose">
+          <p>Predictive models derive their utility from learning relationships among variables. These learned relationships can also be exploited through model inversion to infer confidential attributes, even when raw data are not shared. I developed Mosaic Neuron Perturbation (MNP), a neural-network training method that distinguishes sensitive and nonsensitive features and applies stronger perturbation to input neurons associated with designated sensitive features. This makes the allocation of protection an explicit design choice, balancing resistance to information reconstruction with predictive utility. The work combines differential privacy analysis with empirical evaluation of inversion risk and extends to multi-party learning through local model training and parameter aggregation.</p>
+          <p>Experiments using real CNC turning data showed reduced accuracy of sensitive-attribute reconstruction under the evaluated white-box attacks while retaining high predictive accuracy, including in multi-party models.</p>
+          <p>This work informs my research on how privacy requirements shape learning mechanisms and the evidence needed to evaluate their protection and utility.</p>
+        </div>
+        <figure class="research-figure">
+          <div class="figure-frame">
+            <img src="assets/images/figures/privacy-preserving-neural-networks-display.png" alt="An adversary accesses nonsensitive inputs, queried outputs, and a neural network’s structure and parameters to infer a sensitive input variable. A shield on the reconstruction path symbolizes the privacy-protection objective." width="1600" height="914" loading="lazy" decoding="async">
+          </div>
+          <figcaption>Conceptual illustration of the model inversion threat and the goal of reducing sensitive-attribute reconstruction risk through privacy-preserving neural network training. Originally published by ASME. &copy; 2024 ASME.</figcaption>
+        </figure>
+        <div class="publications">
+          <h3>Publications</h3>
+          <ul>
+            <li>Lee, H., Finke, D., and Yang, H. (2024). “<a href="https://doi.org/10.1115/1.4063728" target="_blank" rel="noopener">Privacy-Preserving Neural Networks for Smart Manufacturing<span class="sr-only"> (opens in a new tab)</span></a>.” <cite>Journal of Computing and Information Science in Engineering</cite>, 24(7), 071002.</li>
+          </ul>
+        </div>
+      </article>
+    </main>
+
+    <footer class="site-footer">
+      <div class="site-footer__inner">
+        <span>Hankang Lee</span>
+        <nav aria-label="Footer navigation">
+          <a href="index.html">Home</a>
+          <a href="research-program.html">Research Program</a>
+          <a href="featured-contributions.html">Featured Contributions</a>
+          <a href="profile-resources.html">Profile &amp; Resources</a>
+        </nav>
+      </div>
+    </footer>
+  </body>
+</html>
