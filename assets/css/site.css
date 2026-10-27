@@ -308,6 +308,13 @@ a:focus-visible {
   line-height: 1.65;
 }
 
+.publication-recognition {
+  margin: 0.6rem 0 0 1.5rem;
+  color: var(--muted);
+  font-size: 0.95rem;
+  line-height: 1.65;
+}
+
 .resource-list {
   max-width: var(--reading-width);
 }
